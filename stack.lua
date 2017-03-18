@@ -1,6 +1,6 @@
 local class = require 'ext.class'
 local table = require 'ext.table'
-local Card = require 'card' 
+local Card = require 'cards.card' 
 local Stack = class()
 function Stack:init(args)
 	self.cards = table(args and args.cards or {})

@@ -1,7 +1,7 @@
 local class = require 'ext.class'
 local table = require 'ext.table'
-local Stack = require 'stack'
-local Card = require 'card'
+local Stack = require 'cards.stack'
+local Card = require 'cards.card'
 local Deck = class(Stack)
 function Deck:init()
 	Deck.super.init(self)
