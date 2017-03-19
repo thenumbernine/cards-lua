@@ -5,11 +5,18 @@ local Card = class()
 
 Card.names = table{'A','2','3','4','5','6','7','8','9','T','J','Q','K'}
 
+local red = '\27[31;1m'
+local black = '\27[30;0m'
+local grey = '\27[30;1m'
+local white = '\27[37;1m'
+local redback = '\27[41;1m'
+local greyback = '\27[40;1m'
+local blackback = '\27[40;0m'
 Card.suits = table{
-	{name='spades', symbol='♠'},
-	{name='hearts', symbol='♥'},
-	{name='diamonds', symbol='♦'},
-	{name='clubs', symbol='♣'},
+	{name='spades', symbol=greyback..'♠'..blackback},
+	{name='hearts', symbol=redback..'♥'..blackback},
+	{name='diamonds', symbol=red..'♦'..white},
+	{name='clubs', symbol=grey..'♣'..white},
 }
 
 Card.facedown = '##'	--facedown-card string.  I might make 'facedown' flag...
