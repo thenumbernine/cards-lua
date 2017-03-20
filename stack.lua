@@ -16,6 +16,7 @@ end
 function Stack:__tostring()
 	return self.cards:map(tostring):concat' '
 end
+function Stack.__concat(a,b) return tostring(a) .. tostring(b) end
 
 function Stack:clone()
 	local clone = getmetatable(self)()
